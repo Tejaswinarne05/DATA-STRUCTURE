@@ -1,0 +1,23 @@
+#include <stdio.h> 
+#include <string.h> 
+ 
+int main()
+{ 
+	char *str="#GHB1234*(567890.A)"; 
+	int i = 0; 
+         	printf("name:tejaswi\nreg no-192372120\n");
+	for(i=0; i<strlen(str); i++){ 
+		if(46 == str[i] || (48 <= str[i] && 57 >= str[i])){ 
+			if(46 == str[i]) 
+			    printf("[%c] : is dot\n",str[i]); 
+			else 
+			    printf("[%c] : is digit\n",str[i]); 
+		} 
+		else
+		{ 
+			printf("[%c] : Not a digit or dot\n",str[i]); 
+		} 
+	} 
+ 
+	return 0; 
+} 
