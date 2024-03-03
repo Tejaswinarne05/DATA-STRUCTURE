@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string.h>
+void sortAscending(char str[10][10]) {
+    int i, j;
+    char temp[10];
+
+    for (i = 0; i < 10; i++) {
+        for (j = i + 1; j < 10; j++) {
+            if (strcmp(str[i], str[j]) > 0) {
+                strcpy(temp, str[i]);
+                strcpy(str[i], str[j]);
+                strcpy(str[j], temp);
+            }
+        }
+    }
+}
+
+void sortDescending(char str[10][10]) {
+    int i, j;
+    char temp[10];
+
+    for (i = 0; i < 10; i++) {
+        for (j = i + 1; j < 10; j++) {
+            if (strcmp(str[i], str[j]) < 0) {
+                strcpy(temp, str[i]);
+                strcpy(str[i], str[j]);
+                strcpy(str[j], temp);
+            }
+        }
+    }
+}
+
+int main() {
+    char str[10][10] = {"a", "b", "k", "m", "p", "p", "g", "q", "o", "a"};
+  	printf("name:tejaswi\nreg no-192372120\n");
+    printf("Original array:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%s\t", str[i]);
+    }
+
+    printf("\nSorted array in ascending order:\n");
+    sortAscending(str);
+    for (int i = 0; i < 10; i++) {
+        printf("%s\t", str[i]);
+    }
+
+    printf("\nSorted array in descending order:\n");
+    sortDescending(str);
+    for (int i = 0; i < 10; i++) {
+        printf("%s\t", str[i]);
+    }
+
+    return 0;
+}
