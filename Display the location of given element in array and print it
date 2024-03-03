@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+	int a[]={1,2,3,4,5};
+	int *p;
+	new int *;p=&a[0];
+	printf("name:tejaswi\nreg no-192372120\n");
+	printf("%d", *(p+2));
+}
