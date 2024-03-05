@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+int i;
+int n;
+int top;
+int size;
+int data;
+int stack[5];
+int full()
+{
+	if(top==size-1)
+	{
+		return 1;
+	}
+	else
+	return 0;
+}
+int push(int data)
+{
+	if(!full())
+	{
+	top=top+1;
+	stack[top]=data;	
+	}
+}
+int empty()
+{
+	if(top==-1)
+	return 1;
+	else
+	return 0;
+}
+int pop()
+{
+	if(!empty)
+	{
+		data=stack[top];
+		top=top-1;
+	}
+}
+int peak()
+{
+	return stack[top];
+}
+void display()
+{
+	int i;
+	for(i=top;i>=0;i--)
+	{
+		printf("%d",stack[i]);
+	}
+}
+int main()
+{
+	printf("tejaswi  192372120\n");
+	printf("the elements are:");
+	push(20);
+	push(30);
+	push(40);
+	push(50);
+	display();
+	full();
+	empty();
+	printf("\nafter deleting:");
+	pop();
+	display();
+	printf("\nafter peaking:");
+	peak();
+display();
+
+}
